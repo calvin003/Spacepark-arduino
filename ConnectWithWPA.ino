@@ -2,12 +2,8 @@
  This example connects to an unencrypted WiFi network.
  Then it prints the MAC address of the WiFi module,
  the IP address obtained, and other network details.
-
- created 13 July 2010
- by dlf (Metodo2 srl)
- modified 31 May 2012
- by Tom Igoe
  */
+
 #include <SPI.h>
 #include <WiFiNINA.h>
 
