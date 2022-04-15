@@ -2,13 +2,15 @@
 //this code will calculate the number of cars and integrate itself to ultrasonic sensor hopefully
 #include <time.h>
 
-//constant measurements-middle road still needs to be measured
+//constant measurements–still needs to be measured actually
 #define MIDDLEROAD 15
+//velocity is translated from mph to meters per second
 #define velBig 10
 #define velSmol 3
-#define widBig 8
-#define widSmol 2
+#define widBig 18
+#define widSmol 10
 
+//pins for ultrasonic sensor
 #define trigPin1 12
 #define echoPin1 11
 #define trigPin2 10
@@ -21,6 +23,7 @@ float duration1, distance1, duration2, distance2;
 //output
 int carNum = 0;
 
+
 //function declarations
 int detection(double distance);
 void delay(int miliseconds);
@@ -31,6 +34,7 @@ void carAdd(int ultraSen1, int ultraSen2, float sec);
 void carSub(int ultraSen1, int ultraSen2, float sec);
 void sensorIntegrator();
 
+//functions
 void sensorIntegrator() {
 
     // Write a pulse to the HC-SR04 Trigger Pin
@@ -188,3 +192,4 @@ void loop() {
     carAdd(ultraSen1, ultraSen2, sec);
     carSub(ultraSen1, ultraSen2, sec);
 }
+
